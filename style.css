@@ -124,3 +124,21 @@ ul li span:hover {
     color: #ff5945; /* Change color on hover */
     background-color: #edeef0; /* Background changes to gray on hover */
 }
+
+@media screen and (max-width: 412px){
+
+    .todo-app{
+        min-width: 300px;
+    }
+
+    .row input{
+        width: 100%;
+
+    }
+
+    .row button{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+    }
+}
