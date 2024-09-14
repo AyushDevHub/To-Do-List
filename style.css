@@ -1,0 +1,126 @@
+/* Universal reset for margin, padding, and setting box-sizing to border-box for consistent element sizing */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Set the global font to Poppins */
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+}
+
+/* The main container covering the full width and height of the viewport */
+.container {
+    width: 100%;
+    min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+    background: linear-gradient(135deg, #153677, #4e085f); /* Gradient background for a visually appealing look */
+    padding: 10px; /* Adds spacing inside the container */
+}
+
+/* Styles for the to-do app box */
+.todo-app {
+    width: 100%;
+    max-width: 540px; /* Ensures the box doesn't exceed 540px for responsiveness */
+    background: #fff; /* White background for contrast */
+    margin: 100px auto 20px; /* Centers the box and adds top/bottom margin */
+    padding: 40px 30px 70px; /* Inner padding for breathing room */
+    border-radius: 10px; /* Rounded corners for a modern look */
+}
+
+/* Heading styles for the to-do app */
+.todo-app h2 {
+    color: #002765; /* Dark blue color for the heading text */
+    display: flex;
+    align-items: center; /* Vertically center content within the flex container */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Style for the image inside the heading */
+.todo-app h2 img {
+    width: 30px; /* Set the image width */
+    margin-left: 10px; /* Space between text and the image */
+}
+
+/* Row styles for input and add button container */
+.row {
+    display: flex; /* Align input and button in a row */
+    align-items: center; /* Vertically align input and button */
+    justify-content: space-between; /* Distribute space evenly between input and button */
+    background: #edeef0; /* Light gray background for input and button container */
+    border-radius: 30px; /* Rounded corners for a modern look */
+    padding-left: 20px; /* Left padding for input field */
+    margin-bottom: 25px; /* Space below each row */
+}
+
+/* Styles for the input field */
+.row input {
+    flex: 1; /* Makes the input field take up the remaining space */
+    border: none; /* No borders for a clean look */
+    outline: none; /* Remove default focus outline */
+    background: transparent; /* Transparent background */
+    padding: 10px; /* Padding for a better input experience */
+    font-weight: 14px; /* Font weight for input text */
+}
+
+/* Button styles for adding tasks */
+.row button {
+    border: none; /* No borders for the button */
+    outline: none; /* Remove default focus outline */
+    padding: 16px 50px; /* Padding inside the button */
+    background: #ff5945; /* Bright red color for a standout button */
+    color: #fff; /* White text for contrast */
+    font-size: 16px; /* Button text size */
+    cursor: pointer; /* Pointer cursor to indicate it's clickable */
+    border-radius: 40px; /* Fully rounded button */
+}
+
+/* Task list item styles */
+ul li {
+    position: relative; /* Allows for absolute positioning of the checkbox */
+    list-style: none; /* Remove default list bullet points */
+    font-size: 17px; /* Font size for tasks */
+    padding: 12px 8px 12px 50px; /* Padding, with extra space on the left for the checkbox */
+    cursor: pointer; /* Pointer cursor to indicate clickability */
+}
+
+/* Circle checkbox before each task */
+ul li::before {
+    content: ''; /* Empty content for the checkbox */
+    position: absolute; /* Positioned relative to the list item */
+    height: 28px; /* Size of the checkbox */
+    width: 28px; /* Width of the checkbox */
+    border-radius: 50%; /* Make the checkbox a circle */
+    background-image: url(images/unchecked.png); /* Image of the unchecked box */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the image */
+    top: 10px; /* Position it vertically within the list item */
+    left: 8px; /* Space it from the left of the list item */
+}
+
+/* Styles for checked tasks */
+ul li.checked {
+    color: #555; /* Change the text color for checked items */
+    text-decoration: line-through; /* Strikethrough the text to indicate task completion */
+}
+
+/* Checkbox image for checked tasks */
+ul li.checked::before {
+    background-image: url(images/checked.png); /* Change the checkbox image to the checked version */
+}
+
+/* Styles for the delete 'X' button on each task */
+ul li span {
+    position: absolute; /* Positioned relative to the list item */
+    right: 0; /* Align to the right of the list item */
+    top: 5px; /* Positioned slightly from the top */
+    width: 40px; /* Width of the delete button */
+    height: 40px; /* Height of the delete button */
+    font-size: 22px; /* Size of the 'X' */
+    color: #555; /* Default color of the 'X' */
+    line-height: 40px; /* Vertically center the 'X' */
+    text-align: center; /* Horizontally center the 'X' */
+    border-radius: 50%; /* Make the delete button circular */
+}
+
+/* Hover effect for the delete 'X' button */
+ul li span:hover {
+    color: #ff5945; /* Change color on hover */
+    background-color: #edeef0; /* Background changes to gray on hover */
+}

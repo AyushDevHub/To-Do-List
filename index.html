@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Specifies the document type as HTML5 -->
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for universal compatibility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive behavior on different devices -->
+    
+    <!-- Links the external CSS stylesheet for styling the page -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- The title of the page that will appear in the browser tab -->
+    <title>To - Do List</title>
+</head>
+
+<body>
+    <!-- Main container for the entire application -->
+    <div class="container">
+        
+        <!-- The to-do app box containing the title, input, and task list -->
+        <div class="todo-app">
+            
+            <!-- Heading for the app, with an icon image next to the text -->
+            <h2>To - Do List 
+                <img src="images/icon.png" alt=""> <!-- Placeholder for the icon, alternative text provided for accessibility -->
+            </h2>
+            
+            <!-- Row containing the input field for new tasks and the 'Add' button -->
+            <div class="row">
+                <!-- Input field for typing tasks, with a placeholder indicating what to enter -->
+                <input type="text" id="task" placeholder="Enter a task">
+                
+                <!-- Button for adding the task to the list -->
+                <button class="addButton">Add</button>
+            </div>
+            
+            <!-- Unordered list where tasks will be dynamically added -->
+            <ul class="list-container">
+                <!-- Commented out example tasks for testing or reference -->
+                <!-- <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Links the external JavaScript file to add functionality to the to-do app -->
+    <script src="script.js"></script>
+</body>
+
+</html>
